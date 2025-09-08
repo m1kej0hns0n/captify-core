@@ -16,10 +16,10 @@ interface PackageRendererProps {
 export function PackageRenderer({ packageName, params }: PackageRendererProps) {
   // Use dynamic import for package loading
   const PackageComponent = lazy(() => {
-    return import(`@captify/${packageName}`)
+    return import(`@captify-io/${packageName}`)
       .then((packageModule) => {
         if (!packageModule) {
-          throw new Error(`Package @captify/${packageName} not available`);
+          throw new Error(`Package @captify-io/${packageName} not available`);
         }
 
         // Try to get the main app component from the package
@@ -38,7 +38,7 @@ export function PackageRenderer({ packageName, params }: PackageRendererProps) {
                   Package: {packageName}
                 </h2>
                 <p className="text-muted-foreground">
-                  No main component found in @captify/{packageName}
+                  No main component found in @captify-io/{packageName}
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
                   Expected exports: default, App, or {packageName}App
@@ -49,7 +49,7 @@ export function PackageRenderer({ packageName, params }: PackageRendererProps) {
         }
       })
       .catch((error) => {
-        console.error(`Failed to load package @captify/${packageName}:`, error);
+        console.error(`Failed to load package @captify-io/${packageName}:`, error);
         // Error fallback component
         return {
           default: () => (
@@ -58,7 +58,7 @@ export function PackageRenderer({ packageName, params }: PackageRendererProps) {
                 Error Loading Package: {packageName}
               </h2>
               <p className="text-red-600 mb-2">
-                Failed to load @captify/{packageName}
+                Failed to load @captify-io/{packageName}
               </p>
               <details className="text-sm text-red-600">
                 <summary className="cursor-pointer">Error Details</summary>

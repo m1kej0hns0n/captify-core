@@ -2335,9 +2335,9 @@ async function loadPackageRegistry(packageName) {
   console.log(`[PackageRegistry] Loading package: ${packageName}`);
   try {
     console.log(`[PackageRegistry] Importing package module for: ${packageName}`);
-    const appModule = await import(`@captify/${packageName}`).catch(() => null);
+    const appModule = await import(`@captify-io/${packageName}`).catch(() => null);
     if (!appModule) {
-      console.warn(`Package @captify/${packageName} not available`);
+      console.warn(`Package @captify-io/${packageName} not available`);
       return null;
     }
     console.log(`[PackageRegistry] Package module loaded:`, appModule);
@@ -3912,9 +3912,9 @@ import { lazy as lazy2, Suspense as Suspense4 } from "react";
 import { jsx as jsx27, jsxs as jsxs17 } from "react/jsx-runtime";
 function PackageRenderer({ packageName, params }) {
   const PackageComponent = lazy2(() => {
-    return import(`@captify/${packageName}`).then((packageModule) => {
+    return import(`@captify-io/${packageName}`).then((packageModule) => {
       if (!packageModule) {
-        throw new Error(`Package @captify/${packageName} not available`);
+        throw new Error(`Package @captify-io/${packageName} not available`);
       }
       if (packageModule.default) {
         return { default: packageModule.default };
@@ -3930,7 +3930,7 @@ function PackageRenderer({ packageName, params }) {
               packageName
             ] }),
             /* @__PURE__ */ jsxs17("p", { className: "text-muted-foreground", children: [
-              "No main component found in @captify/",
+              "No main component found in @captify-io/",
               packageName
             ] }),
             /* @__PURE__ */ jsxs17("p", { className: "text-sm text-muted-foreground mt-2", children: [
@@ -3942,7 +3942,7 @@ function PackageRenderer({ packageName, params }) {
         };
       }
     }).catch((error) => {
-      console.error(`Failed to load package @captify/${packageName}:`, error);
+      console.error(`Failed to load package @captify-io/${packageName}:`, error);
       return {
         default: /* @__PURE__ */ __name(() => /* @__PURE__ */ jsxs17("div", { className: "p-4 border border-red-200 bg-red-50 rounded-lg", children: [
           /* @__PURE__ */ jsxs17("h2", { className: "text-lg font-semibold mb-2 text-red-700", children: [
@@ -3950,7 +3950,7 @@ function PackageRenderer({ packageName, params }) {
             packageName
           ] }),
           /* @__PURE__ */ jsxs17("p", { className: "text-red-600 mb-2", children: [
-            "Failed to load @captify/",
+            "Failed to load @captify-io/",
             packageName
           ] }),
           /* @__PURE__ */ jsxs17("details", { className: "text-sm text-red-600", children: [

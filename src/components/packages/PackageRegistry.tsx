@@ -12,9 +12,9 @@ export async function loadPackageRegistry(packageName: string) {
   try {
     console.log(`[PackageRegistry] Importing package module for: ${packageName}`);
     // Dynamically import the package using the slug
-    const appModule = await import(`@captify/${packageName}`).catch(() => null);
+    const appModule = await import(`@captify-io/${packageName}`).catch(() => null);
     if (!appModule) {
-      console.warn(`Package @captify/${packageName} not available`);
+      console.warn(`Package @captify-io/${packageName} not available`);
       return null;
     }
     console.log(`[PackageRegistry] Package module loaded:`, appModule);
