@@ -1,0 +1,23 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pnpm install:*)",
+      "Bash(pnpm build:*)",
+      "Bash(pnpm list:*)",
+      "Bash(pnpm update:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(npm install)",
+      "Bash(npm publish:*)",
+      "Bash(git reset:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npx next dev:*)",
+      "Bash(npm install:*)",
+      "Bash(npm run build:*)",
+      "Bash(npm run clean:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
