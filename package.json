@@ -1,5 +1,5 @@
 {
-    "name": "@m1kej0hns0n/captify-core",
+    "name": "@captify-io/core",
     "version": "1.0.0",
     "description": "Core components, types, and utilities for Captify platform",
     "main": "dist/components.mjs",
