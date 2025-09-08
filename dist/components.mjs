@@ -2335,7 +2335,10 @@ async function loadPackageRegistry(packageName) {
   console.log(`[PackageRegistry] Loading package: ${packageName}`);
   try {
     console.log(`[PackageRegistry] Importing package module for: ${packageName}`);
-    const appModule = await import(`@captify-io/${packageName}`).catch(() => null);
+    const appModule = await import(
+      /* webpackIgnore: true */
+      `@captify-io/${packageName}`
+    ).catch(() => null);
     if (!appModule) {
       console.warn(`Package @captify-io/${packageName} not available`);
       return null;
@@ -3912,7 +3915,10 @@ import { lazy as lazy2, Suspense as Suspense4 } from "react";
 import { jsx as jsx27, jsxs as jsxs17 } from "react/jsx-runtime";
 function PackageRenderer({ packageName, params }) {
   const PackageComponent = lazy2(() => {
-    return import(`@captify-io/${packageName}`).then((packageModule) => {
+    return import(
+      /* webpackIgnore: true */
+      `@captify-io/${packageName}`
+    ).then((packageModule) => {
       if (!packageModule) {
         throw new Error(`Package @captify-io/${packageName} not available`);
       }
