@@ -6,6 +6,8 @@ node_modules/
 # Note: dist/ is NOT ignored as it needs to be published to npm
 build/
 *.tsbuildinfo
+.next/
+out/
 
 # Environment variables
 .env
