@@ -4,13 +4,12 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "es6"
+      "es2022"
     ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
@@ -27,16 +26,10 @@
       ]
     },
     "incremental": true,
-    "tsBuildInfoFile": "./.tsbuildinfo",
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ]
+    "tsBuildInfoFile": "./.tsbuildinfo"
   },
   "include": [
-    "src/**/*",
-    ".next/types/**/*.ts"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",
