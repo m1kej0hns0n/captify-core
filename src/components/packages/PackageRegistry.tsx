@@ -12,7 +12,8 @@ export async function loadPackageRegistry(packageName: string) {
   try {
     console.log(`[PackageRegistry] Importing package module for: ${packageName}`);
     // Dynamically import the package using the slug
-    const appModule = await import(`@captify-io/${packageName}`).catch(() => null);
+    // Use webpackIgnore to prevent webpack from analyzing this import
+    const appModule = await import(/* webpackIgnore: true */ `@captify-io/${packageName}`).catch(() => null);
     if (!appModule) {
       console.warn(`Package @captify-io/${packageName} not available`);
       return null;

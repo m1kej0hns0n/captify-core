@@ -32,5 +32,8 @@ export * from './theme/ThemeToggle';
 export * from './ApplicationLauncher';
 export * from './UserRegistrationForm';
 
+// Auth components
+export * from './auth/LoginScreen';
+
 // Re-export UI components
 export * from './ui';

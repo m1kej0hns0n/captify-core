@@ -16,7 +16,8 @@ interface PackageRendererProps {
 export function PackageRenderer({ packageName, params }: PackageRendererProps) {
   // Use dynamic import for package loading
   const PackageComponent = lazy(() => {
-    return import(`@captify-io/${packageName}`)
+    // Use webpackIgnore to prevent webpack from analyzing this import
+    return import(/* webpackIgnore: true */ `@captify-io/${packageName}`)
       .then((packageModule) => {
         if (!packageModule) {
           throw new Error(`Package @captify-io/${packageName} not available`);
