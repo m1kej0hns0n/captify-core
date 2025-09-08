@@ -422,7 +422,7 @@ declare const InputOTP: React$1.ForwardRefExoticComponent<(Omit<Omit<React$1.Inp
 } & {
     render?: never;
     children: React$1.ReactNode;
-} & React$1.RefAttributes<HTMLInputElement>, "ref">) & React$1.RefAttributes<never>>;
+} & React$1.RefAttributes<HTMLInputElement>, "ref">) & React$1.RefAttributes<HTMLInputElement>>;
 declare const InputOTPGroup: React$1.ForwardRefExoticComponent<Omit<React$1.DetailedHTMLProps<React$1.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & React$1.RefAttributes<HTMLDivElement>>;
 declare const InputOTPSlot: React$1.ForwardRefExoticComponent<Omit<React$1.DetailedHTMLProps<React$1.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, "ref"> & {
     index: number;
