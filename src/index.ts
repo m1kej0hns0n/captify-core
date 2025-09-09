@@ -1,5 +1,5 @@
 /**
- * @captify/core - Shared components, types, and utilities
+ * @captify-io/core - Shared components, types, and utilities
  */
 
 // Export all types

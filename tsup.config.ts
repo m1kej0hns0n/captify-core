@@ -27,16 +27,15 @@ const createEntryConfig = (
     "next/navigation",
     "next/router",
     "@aws-sdk/*",
-    "@captify/*",
+    "@captify-io/*",
   ],
-  esbuildOptions(options: {
-    jsx: string;
-    jsxImportSource: string;
-    keepNames: boolean;
-    legalComments: string;
-  }) {
-    options.jsx = "automatic";
-    options.jsxImportSource = "react";
+  esbuildOptions(options, context) {
+    if (typeof options.jsx === "string") {
+      options.jsx = "automatic";
+    }
+    if (typeof options.jsxImportSource === "string") {
+      options.jsxImportSource = "react";
+    }
     options.keepNames = true;
     options.legalComments = "none";
   },
@@ -45,7 +44,9 @@ const createEntryConfig = (
       js: '"use client";',
     },
   }),
-  onSuccess: isDev ? `echo '@captify/core ${entryName} rebuilt!'` : undefined,
+  onSuccess: isDev
+    ? `echo '@captify-io/core ${entryName} rebuilt!'`
+    : undefined,
   watch: isDev ? [`src/**/*.ts`, `src/**/*.tsx`] : false,
 });
 

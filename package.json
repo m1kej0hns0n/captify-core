@@ -114,7 +114,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/anaut/captify-core.git"
+    "url": "git+https://github.com/captify-io/core.git"
   },
   "publishConfig": {
     "registry": "https://npm.pkg.github.com",
