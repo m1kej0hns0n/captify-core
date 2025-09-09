@@ -10,11 +10,6 @@ This package is hosted on GitHub Package Registry. To install it in your project
 npm install @captify-io/core
 ```
 
-Or with pnpm:
-```bash
-pnpm add @captify-io/core
-```
-
 ## Package Exports
 
 This package provides multiple entry points for different parts of the core functionality:
@@ -71,25 +66,25 @@ import { /* auth utilities */ } from '@captify-io/core/auth'
 
 ### Prerequisites
 - Node.js 18+
-- pnpm (recommended) or npm
+- npm
 
 ### Building the Package
 
 ```bash
 # Install dependencies
-pnpm install
+npm install
 
 # Build the package
-pnpm build
+npm run build
 
 # Watch mode for development
-pnpm dev
+npm run dev
 
 # Type checking
-pnpm type-check
+npm run type-check
 
 # Clean build artifacts
-pnpm clean
+npm run clean
 ```
 
 ### Project Structure
@@ -115,7 +110,7 @@ This package is automatically published to GitHub Package Registry. The package 
 ### Manual Publishing
 
 1. Ensure you're authenticated with GitHub Package Registry
-2. Build the package: `pnpm build`
+2. Build the package: `npm run build`
 3. Publish: `npm publish`
 
 ## Version
