@@ -21,15 +21,16 @@ jobs:
           node-version: '20'
           registry-url: 'https://npm.pkg.github.com'
       
+      - name: Install pnpm
+        run: npm install -g pnpm
+      
       - name: Configure npm for GitHub Packages
         run: |
           echo "@captify-io:registry=https://npm.pkg.github.com" >> ~/.npmrc
           echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> ~/.npmrc
+          echo "registry=https://registry.npmjs.org/" >> ~/.npmrc
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Install pnpm
-        run: npm install -g pnpm
       
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
