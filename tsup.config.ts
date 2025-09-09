@@ -53,6 +53,7 @@ export default defineConfig([
   // Server-side modules (no "use client")
   createEntryConfig("services", "src/services/index.ts", false),
   createEntryConfig("api", "src/lib/index.ts", false),
+  createEntryConfig("lib", "src/lib/index.ts", false),
   createEntryConfig("types", "src/types/index.ts", false),
   createEntryConfig("auth", "src/auth.ts", false),
 

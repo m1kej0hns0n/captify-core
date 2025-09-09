@@ -37,6 +37,10 @@
     "./auth": {
       "types": "./dist/auth.d.mts",
       "default": "./dist/auth.mjs"
+    },
+    "./lib": {
+      "types": "./dist/lib.d.mts",
+      "default": "./dist/lib.mjs"
     }
   },
   "scripts": {
